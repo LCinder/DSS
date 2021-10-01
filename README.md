@@ -47,3 +47,22 @@ Python necesita la librería para usar un módulo, para los componentes no porqu
 
 
 
+***
+
+## Práctica 1: 
+
+
+- **Servlet:** Código que se ejecuta en el servidor como consecuencia de una petición del lciente.
+Es el equivalente de _applet_ en el servidor.
+
+- **Bean:** Clase de Java gestionado por _JSF._
+
+  - _eager:_
+    - _true:_ Siempre activo, consume recursos.
+    - _false:_ se activa cuando de recibe petición del cliente.
+  - ManagedProperty: 
+
+h:body
+h:form
+h: commandBurron id="..." value style act90jLisitener
+
