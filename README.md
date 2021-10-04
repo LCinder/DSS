@@ -81,7 +81,10 @@ hay problema en heredar de varias cosas, igual que Java.
 Cualquier sotware que sea compatible por la JVM debe publicarse en un directorio
 para que cualquier aplicacion del mundo pueda localuzarlo
 
-
+Un componente se puede vender, y  es importante:
+- Parte ténica
+- Parte de marketing
+- Parte matemática, es un _invariante_ 
 
 
 ***
