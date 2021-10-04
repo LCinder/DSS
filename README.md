@@ -98,9 +98,25 @@ Un componente se puede vender, y  es importante:
   - Parametrización, un componente parametrizado es como un conjunto de componentes. Si tienes una rueda, hay diferentes tipos de ruedas: para invierno, verano, etc.
   - Ligadura dinámica: Incomptible con componentes software
   - Confiabilidad: _ISO-25000C._ Si es confiable es porque puedes depender de él. En avión, miles de personas dependen de que el componente
-    software funcione bien, debe ser robuto, si falla al menos debe poder tener un mecanismo de fallos.
-  Debe poder demostrrse que su funcionamiento es correcto en cualquier traza de ejecución
+    software funcione bien, debe ser **robusto**, si falla al menos debe poder tener un mecanismo de fallos.
+    Debe poder demostrrse que su funcionamiento es correcto en cualquier traza de ejecución. Debe ser **seguro** y
+  **no hackeable**
 - Reflexivo: Debe ser capaz de automodificarse
+
+
+
+---
+
+### Seminario 1
+
+
+- Especificación de interfaces: Agrupa operaciones relacionadas, 
+  pudiéndose modificar o refactorizar. Permite el subtipado.
+  
+- Especificación de operaciones: Debe incluir al menos una operación que no necesite servicios de otras operaciones, sea independiente.
+  - Incluye la relación entra entradas salidas y el estado del componente.
+  - Garantiza la transparencia de lals relaciones entre el objeto del componente y otros componentes.
+
 
 
 
