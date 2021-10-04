@@ -117,8 +117,7 @@ Un componente se puede vender, y  es importante:
   - Incluye la relación entra entradas salidas y el estado del componente.
   - Garantiza la transparencia de lals relaciones entre el objeto del componente y otros componentes.
 
-
-
+  
 
 
 ***
