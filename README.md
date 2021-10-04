@@ -86,6 +86,24 @@ Un componente se puede vender, y  es importante:
 - Parte de marketing
 - Parte matemática, es un _invariante_ 
 
+**Conceptos de Programación orientada a componentes**
+
+- Composición tardía: Se une  los demás componentes en el momento que sea, incluso cuando es necesario, no antes. En la práctica 1, el _eager_ por ejemplo.  
+- Entorno: Debe ser independiente del entorno, Windows, ...
+- Eventos: Debe ser capaz de responder a eventos, son interactivos.
+- Reutilización: Hay diferentes tipos: Caja negra, etc.
+- Contratos: Interfaz
+- Polimosfismo: 3 tipos 
+  - Reemplazar una cosa por otra
+  - Parametrización, un componente parametrizado es como un conjunto de componentes. Si tienes una rueda, hay diferentes tipos de ruedas: para invierno, verano, etc.
+  - Ligadura dinámica: Incomptible con componentes software
+  - Confiabilidad: _ISO-25000C._ Si es confiable es porque puedes depender de él. En avión, miles de personas dependen de que el componente
+    software funcione bien, debe ser robuto, si falla al menos debe poder tener un mecanismo de fallos.
+  Debe poder demostrrse que su funcionamiento es correcto en cualquier traza de ejecución
+- Reflexivo: Debe ser capaz de automodificarse
+
+
+
 
 ***
 
