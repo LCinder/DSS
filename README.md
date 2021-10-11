@@ -115,9 +115,55 @@ Un componente se puede vender, y  es importante:
   
 - Especificación de operaciones: Debe incluir al menos una operación que no necesite servicios de otras operaciones, sea independiente.
   - Incluye la relación entra entradas salidas y el estado del componente.
-  - Garantiza la transparencia de lals relaciones entre el objeto del componente y otros componentes.
+  - Garantiza la transparencia de las relaciones entre el objeto del componente y otros componentes.
 
-  
+Línea de Uso: Discontinua, para un tipo necesito otro tipo.
+
+
+Ejercicios:
+
+1 - Establecer contexto: Context : GetionClientes
+consigue DetallesCliente(in_cliente: identificacionCliente) : DetallesCliente
+pre:: clientes -> exists(c|c.id = in_cliente) // | = tal que, en cada c(cliente) existe al menos un id que es igual al parametro de entrada cliente
+pos:: let cliente = clientes select(c|c.id = in_cliente)
+
+result.nombre = cliente.nombre and // aqui = es como ==
+result.codigoPostal = cliente.CodigPostal and
+result.correo = cliente.correo and
+---
+
+3 - Context:: IStudentManagement
+getStudentDetails(_in_stu_:studentIdentifier):StudentDetails
+pre:: student implies exist (s|s.id student = _stu_) // in_stu = stu
+post:: let student = students -> select (s|s.id = stu) in 
+
+result.name = stu.name
+
+result.email = stu.email
+
+result.postCode = stu.postCode
+
+
+4-
+- a:Context::FlightInvariant
+  - self.duration < 4
+- b:  -Context::FightInv
+  - self.maxNumberPassengers  < 500 or passengers.size  < 500
+- c: Context::FightInv
+  - self.age >= self.minAge
+- d: self.duration = self.ArrivalTime - self.DepartureTime or
+  - self.duration = destination.depart - origin.departure
+- e: - self origin.name |= self destionation.name
+- f: - self.origin.name = "Amsterdam"
+
+5- 
+Context::IHotelMgt
+makeReservation(in_res:ReservationDetails, in_cust:CusId, out resRef:string):bool
+pre::customer-> exist(c:Customer | c.id=cus) // c recorre todos los clientes hasta que coincida un id
+Hotel -> exist(h:Hotel | h.id = res.HotelId)
+RoomType -> exist(rt:RoomType | rt.name = res.rtName)
+reseration -> exist(r:Reservation | r.HotelId = res.hotelId,
+r.DateRange = res.DateRange, r.claimId -> r.allocation -> empty) // Página 22 seminario, Reserva y Room tiene una relación llamada _allocation_
 
 
 ***
@@ -135,7 +181,15 @@ Es el equivalente de _applet_ en el servidor.
     - _false:_ se activa cuando de recibe petición del cliente.
   - ManagedProperty: 
 
-h:body
+`h:body
 h:form
-h: commandButton id="..." value style actionListener
+h: commandButton id="..." value style actionListener`
 
+`home.xhtml` y `faces-config.xml `van siempre dentro de WEB_INF
+
+Si quiero ir a otra pagina pagina2.xhtml pulsando un boton seria
+`h:commandButton action="pagina2" value="Pagina 2"`
+Otra manera mejor seria crear un `ManageBean`
+
+Las paginas se recargan directamente de una a otra en la misma pagina,
+si quiero que se cambie la ruta se hace con `action="pagina1?faces-redirect=true"`
