@@ -103,7 +103,26 @@ Un componente se puede vender, y  es importante:
   **no hackeable**
 - Reflexivo: Debe ser capaz de automodificarse
 
+---
 
+### 18/10/21
+
+- DLL: Solución para las llamadas que no pueden ser recibidas poor la máquina solicitante.
+- DCOM: Versión de Microsoft para implementar DCE, con diferentes capas, 
+una que se encarga de objetos e interfaces, etc. 3 en total: responsabilidad de cliente, 
+del servidor y la que permite la comunicacio  entre las 2.
+- CORBA: Modulo que permite interoperabilidad entre maquinas remotas
+- Despues surgio la Virtual Machine, con Java y .NET, donde una maquina virtual
+tiene una implementacion para una plataforma, y todas se comunican entre si, es muy lento
+porque hay que compilar antes
+- Stub: Adapta la llamada de objeto CORBA a un objeto que es transmitido a traves de ORB
+- IDL: Leguaje parecido a JAva que cuando se compila genera stubs y skeletons, que otra maquina podra isntalar
+- DCOM vs CORBA: Los clientes se comunican para acceder a una operacion, mientras que en CORBA
+se utiliza una referencia textual que no depende de ninguna maquina, de manera que el servidor
+parece un objeto local en la maquina del cliente, permitiendo herencia multiple tambien
+- Los componentes permiten instalarse en la plataforma de cmponentes para que puedan interactuar entre ellos,
+como JavaBeans
+- 
 
 ---
 
@@ -193,3 +212,19 @@ Otra manera mejor seria crear un `ManageBean`
 
 Las paginas se recargan directamente de una a otra en la misma pagina,
 si quiero que se cambie la ruta se hace con `action="pagina1?faces-redirect=true"`
+
+
+
+## Práctica 2: RESTful
+
+
+
+
+
+
+
+
+
+
+
+
