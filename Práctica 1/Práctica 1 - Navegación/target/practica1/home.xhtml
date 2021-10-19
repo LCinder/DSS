@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+	<title>Práctica 2 - Navegación</title>
+</head>
+
+<h:body>
+	<h:form>
+		<h3>Salida Navegación implícita</h3>
+		<h:commandButton action="pagina2" value="Pagina 2"/>
+		<br/>
+
+		<h3>Utilizando un ManagedBean</h3>
+		<h:commandButton action="#{controladorNavegacion.moverHaciaPagina1}" value="Pagina 1"/>
+		<br/>
+
+		<h3>Navegación condicional</h3>
+		<h:commandButton action="#{controladorNavegacion.mostrarPagina}" value="Pagina 1">
+		<f:param name="pageId" value="1"/>
+		</h:commandButton>
+		<h:commandButton action="#{controladorNavegacion.mostrarPagina}" value="Pagina 2">
+			<f:param name="pageId" value="2"/>
+		</h:commandButton>
+		<h:commandButton action="#{controladorNavegacion.mostrarPagina}" value="Volver a home">
+			<f:param name="pageId" value="3"/>
+		</h:commandButton>
+		<br/>
+
+		<h3>Desde componente UI faces-config</h3>
+			<h:commandButton action="#{controladorNavegacion.procesarPagina1}" value="Pagina 1"/>
+			<h:commandButton action="#{controladorNavegacion.procesarPagina2}" value="Pagina 2"/>
+		<br/>
+
+		<h3>Navegación hacia delante vs Redireccionamiento</h3>
+		<h4>Hacia delante</h4>
+		<h:commandButton action="pagina1" value="Pagina 1"/>
+		<br/>
+		<h4>Redireccionamiento</h4>
+		<h:commandButton action="pagina1?faces-redirect=true" value="Pagina 1"/>
+	</h:form>
+</h:body>
+
+</html>
+ 

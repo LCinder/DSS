@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<head>
+		<title>Práctica 1 - Calentando motores</title>
+	</head>
+	
+	<h:body>
+		
+		<h2 style="color: #{controladorMotor.colorTitulo}; text-align: center; padding-top: 100px;">
+		#{controladorMotor.textoTitulo}
+		</h2>
+		
+		<br/>
+		<br/>
+		
+		<h:form style="text-align: center;">
+			<h:commandButton id="encenderButton"
+			value="#{controladorMotor.textoBtnOnOff}" 
+			actionListener="#{controladorMotor.actualizarBtnOnOff}"
+			style="background-color: #{controladorMotor.colorBtnOnOff}; margin-right: 50px; border: none; color: white; padding: 15px 30px;
+			border-radius: 20px;">
+			</h:commandButton>
+			
+			<h:commandButton id="acelerarButton"
+			value="Acelerar" 
+			actionListener="#{controladorMotor.actualizarBtnAcelerar}"
+			style="background-color: #{controladorMotor.colorBtnAcelerar}; margin-right: 50px; border: none; color: white; padding: 15px 30px;
+			border-radius: 20px;">
+			</h:commandButton>
+		</h:form>
+		
+	</h:body>
+
+</html>
+ 
