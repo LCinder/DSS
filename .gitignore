@@ -1,3 +1,3 @@
-holamundo
-.idea
-DSS.iml
+
+*.idea*
+*DSS.iml*
