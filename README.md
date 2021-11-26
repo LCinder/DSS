@@ -122,9 +122,28 @@ se utiliza una referencia textual que no depende de ninguna maquina, de manera q
 parece un objeto local en la maquina del cliente, permitiendo herencia multiple tambien
 - Los componentes permiten instalarse en la plataforma de cmponentes para que puedan interactuar entre ellos,
 como JavaBeans
-- 
 
 ---
+
+## Tema 2
+- **Middleware:** No es adecuado para desarrollar software con criticidad temporal.
+- **SOA:** Desarrollar aplicaciones juntando servicios, es un estilo arquitectonico
+
+**Business process modeling:** Es transparente, otorga independencia de sistemas de plataformas
+- permite integrar imklementaciones basadas en las TIC gradualmente evitando la encadenacion de un sistema a una plataforma
+- Esta oritentado a flujos y tareas de trabajo mas que  a objetos, entidades, etc. Lo mas importante
+son los procesos no los objetos
+- Eriksson- Penken: Es UML con cosas extra: modelar procesos, modelas lanes de provesos y modelar seuencias de tareeas
+Tiene estereotipos que definen procesos dentro de un negocio, utilliza valores con etiquetas y restriccciones, _constraints_
+- Los CU tienen una linea diagonal en el circulo que indica que es representativo de un negocio
+
+
+- **SpringBoot:** Integra REST y persistencia
+- _Autowired:_ Le doy la responsabilidad a Spring para buscar Beans para crear una entidad, o lo que sea
+- En un archivo estan definidos los Beans y el modelo de Datos, no como con Jersey que estaba separado
+Hay que poner especificamente que beans tiene que seleccionar el framework, y para ello se _cualifican_ con _Qualifier_
+- 
+
 
 ### Seminario 1
 
@@ -217,7 +236,26 @@ si quiero que se cambie la ruta se hace con `action="pagina1?faces-redirect=true
 
 ## Práctica 2: RESTful
 
+- Marshalling: Envia lso datos empaquetados para el servidor, es un stub
+- Unmarchalling: Desempaqueta los datos del cliente y los transforma para leerlos, es un skeleton 
 
+### Spring
+- Repository = DAO
+- Inyecta codigo dentro de un codigo base
+- Sigue MVC
+
+### BPEL
+- BPEL contiene WSDL
+- Toda orquestacion es en si un servicio
+- Existe la coreografia de orquestaciones
+- Coreografia vs orquestaicciones: Facilidad de dinamicidad?
+
+### Práctica 3
+- Eclipse Photon, Ode Server
+- Incluir libreria Tomcat-juli
+- Quitr java.endorse en arguments
+- Arrancr Ode y crear nuevo proyecto BPEL
+- 
 
 
 
