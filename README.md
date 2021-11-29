@@ -142,8 +142,47 @@ Tiene estereotipos que definen procesos dentro de un negocio, utilliza valores c
 - _Autowired:_ Le doy la responsabilidad a Spring para buscar Beans para crear una entidad, o lo que sea
 - En un archivo estan definidos los Beans y el modelo de Datos, no como con Jersey que estaba separado
 Hay que poner especificamente que beans tiene que seleccionar el framework, y para ello se _cualifican_ con _Qualifier_
-- 
 
+---
+
+## Tema 3: Computación Ubicua
+
+- **Computación pervasiva:** Los dispositivos se conectan entre ellos y no necesitan intervencion humana
+  - Los dispositivos deben ser conscientes del contexto para actuar en consecuencia
+  - Tiene que haber un middleware pervasivo
+  - Tiene que haber un soporte de bajo nivel para la movilidad,
+  no debe haber nonguna alteracion si el dispositivo se mueve
+  - Debe haber soporte a la movilidad: Se debe poder iniciar una aplicacion en un dispositivo, y se debe poder
+  continuar en cualquier otro dispositivo (de laptop a movil) es decir, es 
+  ubicua, sin perder informacion
+  - Soporte para la pervasividad: Los dispositivos deben ser colaborativos, 
+  permitiendo escalabilidad ilimitada
+  - M2M: Sistema permasivo puro vs IoT: Debe pasar necesariamente por internet
+  - No existe un estandar internacional para sistemas CU: esto daña la interoperabilidad, y no se puede
+  certificar la calidad de un software
+  - La pervasividad hace que sea muy compleja
+  - La comunicacion tiene que ser P2P: jerarquia completamente horizontal
+  - Se tiene una colaboracion SOA multinivel: servicios con granularidad de fina a gruesa
+  - **Espacio ubicuo:** Esta lleno de dispositivos pervasivos, siendo transparente a los usuarios
+  - Los usuarios no tienen que entender que hacen individualmente, los dispositivos son
+  colaboraivos, inician tareas autonomamente, son proactivos, no esperan comandos de usuarios, 
+  ellos mismos inician actividades
+- **¿Como llevar a cabo la consciencia del contexto?**
+  - Se pretende unir los componentes software distribuidos e IA
+  - En un contexto fisico, la ubicacion es muy importante
+  - En un entorno de ejecucion de aplicaciones voluble, que debe ser capaz
+  de hacer predicciones dentro de un contextoEl contexto no puede modificar el contexto de los componentes, 
+  pero estos si deben ser capaces de actuar de forma distinta a su contexto
+  - Un contexto en CU son las propiedades que caracterizan la forma de ejecutarse de las 
+  aplicaciones software, o las relaciones entre componenetes y los dispositivos del espacio pervasivo
+  - El contexto propicia la proactividad de los servicios del sistema, ademas reduce
+    la participacion de los usuarios, y es necesario para llegar a la Inteligencia Ambiental
+  - A las ontologias les falta la parte de inteligencia, tienen que dar un significado de relaciones semanticas
+  - IoT: Vision orientada a las cosas, vision orientada a internet y vision orientada a la semantica
+  - Programacion tradicional vs Computacion Ubicua: Computacion consciente de su contexto, estandarizacion
+  - 
+---
+---
 
 ### Seminario 1
 
