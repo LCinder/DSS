@@ -180,7 +180,29 @@ Hay que poner especificamente que beans tiene que seleccionar el framework, y pa
   - A las ontologias les falta la parte de inteligencia, tienen que dar un significado de relaciones semanticas
   - IoT: Vision orientada a las cosas, vision orientada a internet y vision orientada a la semantica
   - Programacion tradicional vs Computacion Ubicua: Computacion consciente de su contexto, estandarizacion
-  - 
+- Queremos **ejecutar la información** por dispositivos sin intervención humana
+- Si no se utiliza semantica es un servicio sensible al contexto
+- Web Semántica:
+  - Se necesitan notaciones para poder determinar conceptos, como OWL
+  - RDF: Modelo de datos para definir recursos y relaciones entre ellos, existen lenguajes ontológicos que se han ido definiendo.
+Propicia la fusion de modelos, RDF indica el formato con el que los datos esta escritos
+  El validador descompone la tripleta en sujeto, objeto y predicado
+    - Ideas: Tener un registro de datos mundial. Solo da formato, el siginficado lo da OWL
+    - Integración del conocimiento (Knowledge Integration): Sirve para poder juntar
+    datos de BBDD diferentes, sin intervencion humana
+    - Se necesita una ontologia y un end-point para modelar semanticamente datos
+    - RDF y la ontologia estan en correspondencia continua para formar un OWL
+    - Los objetos pueden relacionar individuos o clases
+    - OWL DL pierde compatibilidad con RDF
+    - OWL supone la hipotesis del mundo cerrado o unico
+    - En las clases OWL definidas como suficiente (only), solamente los elementos de la misma clase definen una propiedad
+
+
+  - Esto se propuso para poder realizar consultas a BBDD, SPARQL esta pensado para integrarse
+  con estos lenguajes
+  - Protege utiliza OWL-DL(descriptive logic)
+  - URIs: Generalizacion de URL. Permite acceder a cualquier objeto, no solo paginas webs como hace URL.
+
 ---
 ---
 
