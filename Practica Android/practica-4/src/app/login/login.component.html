@@ -1,0 +1,18 @@
+
+<ion-content fullscreen>
+  <ion-grid fixed id="container">
+    <ion-list>
+      <form formGroup="form" (submit)="login()">
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-input formControlName="email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input formControlName="password" name="password" type="password"></ion-input>
+        </ion-item>
+        <ion-button color="primary" fill="outline" type="submit">Login</ion-button>
+      </form>
+    </ion-list>
+  </ion-grid>
+</ion-content>
