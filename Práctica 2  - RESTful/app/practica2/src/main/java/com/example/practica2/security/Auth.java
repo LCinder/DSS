@@ -66,8 +66,9 @@ public class Auth extends WebSecurityConfigurerAdapter {
         httpSecurity.cors().and().csrf().disable()
         .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint).and()
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        .and().authorizeRequests().antMatchers("/users/**").permitAll()
-        .anyRequest().authenticated()
+        /*.and().authorizeRequests().antMatchers("/users/**").permitAll()
+        .anyRequest().permitAll()*/
+                .and().authorizeRequests().antMatchers("/**").permitAll()
         /*.antMatchers(HttpMethod.GET, "/**").permitAll()
         .antMatchers(HttpMethod.POST, "/products/**").hasRole("ADMIN")
         .antMatchers(HttpMethod.PUT, "/products/**").permitAll()
